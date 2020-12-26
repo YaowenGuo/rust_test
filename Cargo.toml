@@ -1,0 +1,19 @@
+[package]
+name = "rust_test"
+version = "0.1.0"
+authors = ["Albert <guobool@163.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# lib.rs is the default lib file.
+#[lib]
+#name = "graph"
+#path = "src/lib.rs"
+
+# default is main.rs or bin/*.rs
+#[[bin]]
+#name = "generic"
+#path = "src/bin/*.rs"
