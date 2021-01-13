@@ -62,11 +62,35 @@ fn main() {
 
 
     // ----------------
-    let s1 = String::from("hello");
+    // let s1 = String::from("hello");
+    //
+    // let len = calculate_length(&s1);
+    //
+    // println!("The length of '{}' is {}.", s1, len);
 
-    let len = calculate_length(&s1);
 
-    println!("The length of '{}' is {}.", s1, len);
+    // ------------------ reference ---------------
+
+    // let s1 = String::from("hello");
+    //
+    // let s: &String;
+    // s = &s1;
+    //
+    // println!("The reference of s1 {} is {}.", s1, *s);
+
+
+    // ----------------- lifetime of reference -------
+
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    println!("{} and {}", r1, r2);
+    // <---- r1 and r2 are no longer used after this point
+
+    let r3 = &mut s; // no problem
+    println!("{}", r3);
+    // println!("r1: {}, r3: {}",r1, r3); // BIG PROBLEM
 
 }
 
