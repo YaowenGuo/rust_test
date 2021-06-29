@@ -1,7 +1,8 @@
-mod front_of_house;
 mod back_of_house;
+mod front_of_house;
+mod test;
 
-pub use  crate::front_of_house::hosting;
+pub use crate::front_of_house::hosting;
 
 pub fn eat_at_restaurant() {
     let order1 = back_of_house::Appetizer::Soup;
@@ -21,6 +22,5 @@ pub fn eat_at_restaurant() {
     // to see or modify the seasonal fruit that comes with the meal
     // meal.seasonal_fruit = String::from("blueberries");
 }
-
 
 fn serve_order() {}
