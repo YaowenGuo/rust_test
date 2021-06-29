@@ -1,3 +1,5 @@
+mod circle;
+
 use std::marker::Copy;
 #[derive(Debug, Copy, Clone)]
 
@@ -81,17 +83,17 @@ fn main() {
 
     // ----------------- lifetime of reference -------
 
-    let mut s = String::from("hello");
-
-    let r1 = &s; // no problem
-    let r2 = &s; // no problem
-    println!("{} and {}", r1, r2);
-    // <---- r1 and r2 are no longer used after this point
-
-    let r3 = &mut s; // no problem
-    println!("{}", r3);
+    // let mut s = String::from("hello");
+    //
+    // let r1 = &s; // no problem
+    // let r2 = &s; // no problem
+    // println!("{} and {}", r1, r2);
+    // // <---- r1 and r2 are no longer used after this point
+    //
+    // let r3 = &mut s; // no problem
+    // println!("{}", r3);
     // println!("r1: {}, r3: {}",r1, r3); // BIG PROBLEM
-
+    test_scale();
 }
 
 
@@ -125,4 +127,13 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
 // reference
 fn calculate_length(s: &String) -> usize {
     s.len()
+}
+
+
+fn test_scale() {
+    let mut s = String::from("hello");
+
+    let r1 = & s; // 可变引用。
+    let r2 = &mut s; // 不合法
+    println!("{}, {}", r1, r2);
 }
