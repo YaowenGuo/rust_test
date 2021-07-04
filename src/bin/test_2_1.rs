@@ -86,6 +86,6 @@ fn scope() {
 
         let s = String::from("hello world!");
         let s1 = s;
-        println!("{}, {}", s, s1); // Will not working.
+        //println!("{}, {}", s, s1); // Will not working.
     }
 }

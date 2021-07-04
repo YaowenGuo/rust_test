@@ -5,6 +5,6 @@ fn main() {
 
     let f = match f {
         Ok(file) => file,
-        Err(error) => println!("Problem opening the file: {}", error),
+        Err(error) => panic!("Problem opening the file: {}", error),
     };
 }
